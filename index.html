@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./src/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + TS</title>
+    <script type="module" src="./src/main.ts" defer></script>
+  </head>
+  <body>
+    <section id="page-container">
+      <form id="input-form">
+        <div class="inputContainer">
+          <label class="formLabel" for="form-name">Name&#58;</label>
+          <input
+            name="form-name"
+            id="form-name"
+            class="formInput"
+            type="text"
+            placeholder="Enter Your Name"
+            pattern="^[A-Za-z0-9!#$%& ]+$"
+            title="Only standard upper/lower case letters and printable characters are permitted"
+            required
+            aria-label="please enter your name"
+          />
+        </div>
+        <div class="inputContainer">
+          <label class="formLabel" for="form-email">Email&#58;</label>
+          <input
+            name="form-email"
+            id="form-email"
+            class="formInput"
+            type="email"
+            placeholder="Enter Your Email"
+            title="please enter a valid email address"
+            required
+            aria-label="please enter a valid email address"
+          />
+        </div>
+        <div class="inputContainer">
+          <label class="formLabel" for="form-card">Card&#58;</label>
+          <input
+            name="form-card"
+            id="form-card"
+            class="formInput"
+            type="text"
+            placeholder="Enter a Proxy Credit Card Number."
+            pattern="\d*"
+            oninput="this.value = this.value.replace(/\D/g, '')"
+            title="please enter a valid card number"
+            required
+            aria-label="please enter a valid card number"
+          />
+        </div>
+
+        <button
+          type="submit"
+          id="submit-button"
+          aria-label="submit form details"
+        >
+          Submit
+        </button>
+      </form>
+    </section>
+  </body>
+</html>
